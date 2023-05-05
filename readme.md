@@ -80,7 +80,7 @@ Examples
 See the 'examples.cpp' for examples on how to use this library.
 
 ```C++
-#include "colour_console.h"
+#include "include/colour_console.hpp"
 #include <iostream>
 
 int main(){
