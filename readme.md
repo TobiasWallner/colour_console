@@ -97,4 +97,4 @@ int main(){
 }
 ```
 
-![](Images\example_output_image.png)
+![example_output_image](https://user-images.githubusercontent.com/70602844/236524670-ec0bb1dc-a996-4b9b-8401-9ff228002ad0.png)
