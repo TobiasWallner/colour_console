@@ -35,7 +35,14 @@ The default for the Bar is that all bars are deactivated.
 
 This is a very light weight abstraction that aims to not have any overhead over
 calling the windows system calls directly. Thus this is a header only library and 
-everything is marked as 'inline' and 'constexpr'
+everything is marked as 'inline' and 'constexpr'.
+
+There are also other great libraries that make it easy to change the console output format.
+However, some of those use dynamic memory and complex data structures like std::string or std::map.
+This library aims to not use any dynamic memory and after the simplest optimisations in this library
+all additional variables on the stack should also fall away. 
+The resulting assembly should then boil down directly to the necessary Windos System Calls
+without any overhead. 
 
 Usage
 -----
