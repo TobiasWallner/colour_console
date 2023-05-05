@@ -11,14 +11,29 @@ stream useing the stream operator '<<'
 For example you can change the text to be 'red' by:
 
 ```C++
-std::cout << "Normal text" << Text::red << "This text is now red" << std::endl;
+std::cout << "    Normal text. " << Text::red << "This text" << " and everything that follows is now red" << Preset::Default << std::endl;
 ```
 
 You can also compose different settings useing the '|' operator. 
 (It is also possible to compose settings useing the '<<' operator but this is not reccomended)
 
 ```C++
-std::cout << "Normal text" (Text::blue | Background::white | Bar::bottom) << "Formated text" << std::endl;
+std::cout << "    Normal text. " << (Text::blue | Background::white | Bar::bottom) << "This text" << " and everything that follows is now formated" << Preset::Default << std::endl;
+```
+
+If you do not want that all the text and everything that follows changes colour you can use the 'Dye()', 'Mark()' and 'Underline()' functions
+to only apply a colour format to a specific text piece.
+
+```C++
+std::cout << "    In this text we " << Dye::yellow("dyed") << " this text piece" << std::endl;
+std::cout << "    In this text we " << Mark::green("marked") << " this text piece" << std::endl;
+std::cout << "    In this text we " << Underline("underlined") << " this text piece" << std::endl;
+```
+
+You may also compose the different formats as you like.
+
+```C++
+std::cout << "    In this text we composed " << Dye::black(Mark::yellow("a dye and a mark")) << " of this text piece" << std::endl;
 ```
 
 When you use the normal namespaces (Text, Background, Bar, Invert) the text will only apply the

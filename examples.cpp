@@ -1,4 +1,4 @@
-#include "colour_console.h"
+#include "include/colour_console.h"
 #include <iostream>
 
 int main(){
@@ -21,8 +21,6 @@ int main(){
 	
 	std::cout << Bar::bottom << "This text is underscored" << Bar::bottom_off << std::endl << std::endl;
 	
-	std::cout << Underline << "There is also an Underline token that does the same" << Underline_off << std::endl << std::endl;
-	
 	std::cout << Bar::top << "This text is overscored" << Bar::top_off << std::endl << std::endl;
 	
 	std::cout << Bar::left << "This text has left bars" << Bar::left_off << std::endl << std::endl;
@@ -31,11 +29,42 @@ int main(){
 	
 	std::cout << Bar::all << "This text has bars all over"  << Bar::all_off << std::endl;
 			
-	const auto my_preset = Text::blue | Background::white | Underline;
+	const auto my_preset = Text::blue | Background::white | Bar::bottom;
 	std::cout << my_preset << "This is a text with composed format" << Preset::Default << std::endl;
 	
 	std::cout << Preset::link << "This could be a link to a website" << Preset::Default << std::endl;
 	std::cout << Preset::active_link << "This could be an activated link to a website" << Preset::Default << std::endl;
+	
+	
+	std::cout << "In this text we " << Dye::yellow("dyed") << " this text piece" << std::endl;
+	
+	std::cout << "In this text we " << Mark::green("marked") << " this text piece" << std::endl;
+	
+	std::cout << "In this text we " << Underline("underlined") << " this text piece" << std::endl;
+	
+	std::cout << "In this text we composed " << Dye::green(Mark::red("a dye and a mark")) << " of this text piece" << std::endl;
+	
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "    Normal text. " << Text::red << "This text" << " and everything that follows is now red" << Preset::Default << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "    Normal text. " << (Text::blue | Background::white | Bar::bottom) << "This text" << " and everything that follows is now formated" << Preset::Default << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "    In this text we " << Dye::yellow("dyed") << " this text piece" << std::endl;
+	std::cout << "    In this text we " << Mark::green("marked") << " this text piece" << std::endl;
+	std::cout << "    In this text we " << Underline("underlined") << " this text piece" << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "    In this text we composed " << Dye::black(Mark::yellow("a dye and a mark")) << " of this text piece" << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
 	
 	return 0;
 }
