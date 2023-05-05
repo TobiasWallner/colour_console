@@ -13,6 +13,7 @@ For example you can change the text to be 'red' by:
 ```C++
 std::cout << "    Normal text. " << Text::red << "This text" << " and everything that follows is now red" << Preset::Default << std::endl;
 ```
+![001](https://user-images.githubusercontent.com/70602844/236539384-8e2c0624-f39a-4137-aefd-28e146592a26.JPG)
 
 You can also compose different settings useing the '|' operator. 
 (It is also possible to compose settings useing the '<<' operator but this is not reccomended)
@@ -20,6 +21,7 @@ You can also compose different settings useing the '|' operator.
 ```C++
 std::cout << "    Normal text. " << (Text::blue | Background::white | Bar::bottom) << "This text" << " and everything that follows is now formated" << Preset::Default << std::endl;
 ```
+![002](https://user-images.githubusercontent.com/70602844/236539407-25bbf7e8-1370-4eae-abd5-29b0444fdd43.JPG)
 
 If you do not want that all the text and everything that follows changes colour you can use the 'Dye()', 'Mark()' and 'Underline()' functions
 to only apply a colour format to a specific text piece.
@@ -29,12 +31,14 @@ std::cout << "    In this text we " << Dye::yellow("dyed") << " this text piece"
 std::cout << "    In this text we " << Mark::green("marked") << " this text piece" << std::endl;
 std::cout << "    In this text we " << Underline("underlined") << " this text piece" << std::endl;
 ```
+![003](https://user-images.githubusercontent.com/70602844/236539427-c3451423-eb99-407b-87aa-0a8c9ab4ca06.JPG)
 
 You may also compose the different formats as you like.
 
 ```C++
 std::cout << "    In this text we composed " << Dye::black(Mark::yellow("a dye and a mark")) << " of this text piece" << std::endl;
 ```
+![004](https://user-images.githubusercontent.com/70602844/236539451-da175fbb-fc68-483c-b40b-5fde494329a6.JPG)
 
 When you use the normal namespaces (Text, Background, Bar, Invert) the text will only apply the
 change you have set but keep all the settings that were previously active.
