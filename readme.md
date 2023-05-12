@@ -69,7 +69,7 @@ Usage
 Just include this header:
 
 ```C++
-#include "colour_console.hpp"
+#include "colour_console.h"
 ```
 
 Compile with C++17
@@ -80,7 +80,7 @@ Examples
 See the 'examples.cpp' for examples on how to use this library.
 
 ```C++
-#include "include/colour_console.hpp"
+#include "include/colour_console.h"
 #include <iostream>
 
 int main(){
